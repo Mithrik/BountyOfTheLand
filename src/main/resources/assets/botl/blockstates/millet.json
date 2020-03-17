@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "age=0": { "model": "botl:block/millet_stage0" },
+        "age=1": { "model": "botl:block/millet_stage1" },
+        "age=2": { "model": "botl:block/millet_stage2" },
+        "age=3": { "model": "botl:block/millet_stage3" }
+    }
+}

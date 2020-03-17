@@ -1,0 +1,10 @@
+[{
+  "modid": "botl",
+  "name": "Bounty of the Land",
+  "description": "The land is rich! This mod aims to improve farming and reward exploration.",
+  "version": "${mod_version}",
+  "mcversion": "${mc_version}",
+  "logoFile": "logo.png",
+  "authorList": ["Mithrik"],
+  "credits": "Thanks to Mojang and the Forge team."
+}]

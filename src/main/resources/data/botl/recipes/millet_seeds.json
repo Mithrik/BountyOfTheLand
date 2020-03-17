@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "botl:millet"
+    }
+  ],
+  "result": {
+    "item": "botl:millet_seeds",
+    "count": 2
+  }
+}

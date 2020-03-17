@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "botl:corn"
+    }
+  ],
+  "result": {
+    "item": "botl:corn_seeds",
+    "count": 2
+  }
+}

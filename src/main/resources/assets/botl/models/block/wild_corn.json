@@ -1,0 +1,7 @@
+{
+	"parent": "botl:block/overlay_cross",
+	"textures": {
+		"cross": "botl:block/wild_corn",
+		"overlay": "botl:block/wild_corn_overlay"
+	}
+}

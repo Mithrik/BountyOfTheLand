@@ -1,0 +1,6 @@
+{
+    "parent": "botl:block/crop_tall",
+    "textures": {
+        "crop": "botl:block/corn_stage5"
+    }
+}

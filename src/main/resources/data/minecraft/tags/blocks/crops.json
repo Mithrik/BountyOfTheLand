@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "botl:corn",
+    "botl:millet",
+    "botl:rice",
+    "botl:rye",
+    "botl:yams"
+  ]
+}

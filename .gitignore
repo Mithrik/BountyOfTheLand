@@ -1,2 +1,14 @@
-/.gradle/
-/build/
+# Eclipse
+.classpath
+.settings
+.project
+*.launch
+bin/
+
+# Gradle
+.gradle
+build/
+
+# Project
+run/
+main/test/

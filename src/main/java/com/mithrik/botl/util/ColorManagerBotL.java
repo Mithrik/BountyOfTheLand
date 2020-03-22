@@ -29,9 +29,9 @@ public class ColorManagerBotL {
 	@OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void registerItemColorHandlers(final ColorHandlerEvent.Item event) {
-        event.getItemColors().register((stack, num) -> {
-            BlockState blockstate = ((BlockItem)stack.getItem()).getBlock().getDefaultState();
-            return event.getBlockColors().getColor(blockstate, (ILightReader)null, (BlockPos)null, num);
-         }, InitBlocks.WILD_CORN, InitBlocks.WILD_MILLET, InitBlocks.WILD_RICE, InitBlocks.WILD_RYE, InitBlocks.WILD_WHEAT);
+//        event.getItemColors().register((stack, num) -> {
+//            BlockState blockstate = ((BlockItem)stack.getItem()).getBlock().getDefaultState();
+//            return event.getBlockColors().getColor(blockstate, (ILightReader)null, (BlockPos)null, num);
+//         }, InitBlocks.WILD_CORN, InitBlocks.WILD_MILLET, InitBlocks.WILD_RICE, InitBlocks.WILD_RYE, InitBlocks.WILD_WHEAT);
     }
 }

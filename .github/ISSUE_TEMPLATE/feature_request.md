@@ -7,14 +7,11 @@ assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-
 **Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+A clear and detailed description of what your suggestion for the mod is. Make sure that this suggestion has not been already suggested.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Justification**
+Explain why your suggestion should be considered to be implemented in a concise manner.
 
 **Additional context**
-Add any other context or screenshots about the feature request here.
+- Forge version: XX.XX.XX.XXXX

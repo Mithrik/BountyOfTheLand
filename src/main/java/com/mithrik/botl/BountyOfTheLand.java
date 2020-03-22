@@ -1,12 +1,10 @@
 package com.mithrik.botl;
 
-import com.mithrik.botl.objects.blocks.InitBlocks;
-import com.mithrik.botl.objects.blocks.crops.InitCrops;
 import com.mithrik.botl.util.Log;
 import com.mithrik.botl.util.ModInfo;
+import com.mithrik.botl.util.RenderCutouts;
+import com.mithrik.botl.world.gen.features.InitFeatures;
 
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,10 +17,13 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class BountyOfTheLand
 {
 	public static BountyOfTheLand instance;
+	public static final InitFeatures botlFeatures = new InitFeatures();
 	
     public BountyOfTheLand() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        // Register worldgen features for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(botlFeatures::addFeatures);
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
@@ -41,21 +42,7 @@ public class BountyOfTheLand
     	// CLIENT-SIDE CODE HERE...
     	
     	// --- TRANSPARENCY ---
-		RenderTypeLookup.setRenderLayer(InitCrops.CROP_CORN, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitCrops.CROP_RICE, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitCrops.CROP_RYE, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitCrops.CROP_MILLET, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitCrops.CROP_YAMS, RenderType.getCutout());
-		
-		RenderTypeLookup.setRenderLayer(InitBlocks.WILD_BEETROOTS, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitBlocks.WILD_CARROTS, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitBlocks.WILD_CORN, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitBlocks.WILD_MILLET, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitBlocks.WILD_POTATOES, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitBlocks.WILD_RICE, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitBlocks.WILD_RYE, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitBlocks.WILD_WHEAT, RenderType.getCutout());
-		RenderTypeLookup.setRenderLayer(InitBlocks.WILD_YAMS, RenderType.getCutout());
+		RenderCutouts.renderCutouts(event);
     }
 
     @SubscribeEvent

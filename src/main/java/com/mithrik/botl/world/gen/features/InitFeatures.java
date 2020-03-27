@@ -11,6 +11,7 @@ import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
+
 public class InitFeatures {
 
 	public void addFeatures(final FMLCommonSetupEvent event) {

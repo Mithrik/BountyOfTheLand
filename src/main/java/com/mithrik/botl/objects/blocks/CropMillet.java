@@ -1,4 +1,4 @@
-package com.mithrik.botl.objects.blocks.crops;
+package com.mithrik.botl.objects.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

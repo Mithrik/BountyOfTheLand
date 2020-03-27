@@ -1,16 +1,16 @@
 package com.mithrik.botl.objects.items;
 
 import com.mithrik.botl.ItemGroupBotL;
-import com.mithrik.botl.objects.blocks.crops.InitCrops;
+import com.mithrik.botl.objects.blocks.InitBlocks;
 import com.mithrik.botl.util.ModInfo;
 
-import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.ObjectHolder;
 
 /*
@@ -40,24 +40,36 @@ public class InitItems {
 	
 //	REGISTRATION
 	@SubscribeEvent
-	public static void RegisterItems(final RegistryEvent.Register<Item> event) {
+	public static void RegisterItems(RegistryEvent.Register<Item> event) {
+		
+		IForgeRegistry<Item> r = event.getRegistry();
 		
 		// SIMPLE ITEMS
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("millet"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("rice"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("rye"));
+		register(r,"millet",new CropItem(new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
+		register(r,"rice",new CropItem(new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
+		register(r,"rye",new CropItem(new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
 		
 		// FOOD ITEMS
-		event.getRegistry().register(new Item(new Item.Properties().food((new Food.Builder()).hunger(2).saturation(0.6f).build()).group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("corn"));
-		event.getRegistry().register(new BlockNamedItem(InitCrops.CROP_YAMS, new Item.Properties().food((new Food.Builder()).hunger(2).saturation(0.6f).build()).group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("yam"));
+		register(r,"corn",new CropItem(new Item.Properties().food(makeFood(2, 0.6f)).group(ItemGroupBotL.BOTL_ITEMS)));
+		register(r,"yam",new SeedItem(InitBlocks.CROP_YAMS, new Item.Properties().food(makeFood(2, 0.6f)).group(ItemGroupBotL.BOTL_ITEMS)));
 		
-		event.getRegistry().register(new Item(new Item.Properties().food((new Food.Builder()).hunger(4).saturation(2.4f).build()).group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("peach"));
-		event.getRegistry().register(new Item(new Item.Properties().food((new Food.Builder()).hunger(4).saturation(3.6f).build()).group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("mango"));
+		register(r,"peach",new Item(new Item.Properties().food(makeFood(4, 2.4f)).group(ItemGroupBotL.BOTL_ITEMS)));
+		register(r,"mango",new Item(new Item.Properties().food(makeFood(4, 3.6f)).group(ItemGroupBotL.BOTL_ITEMS)));
 		
 		// BLOCK-NAMED ITEMS
-		event.getRegistry().register(new BlockNamedItem(InitCrops.CROP_CORN, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("corn_seeds"));
-		event.getRegistry().register(new BlockNamedItem(InitCrops.CROP_MILLET, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("millet_seeds"));
-		event.getRegistry().register(new BlockNamedItem(InitCrops.CROP_RICE, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("rice_seeds"));
-		event.getRegistry().register(new BlockNamedItem(InitCrops.CROP_RYE, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)).setRegistryName("rye_seeds"));
+		register(r,"corn_seeds",new SeedItem(InitBlocks.CROP_CORN, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
+		register(r,"millet_seeds",new SeedItem(InitBlocks.CROP_MILLET, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
+		register(r,"rice_seeds",new SeedItem(InitBlocks.CROP_RICE, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
+		register(r,"rye_seeds",new SeedItem(InitBlocks.CROP_RYE, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
 	}
+	
+	private static Food makeFood(int hunger, float saturation){
+		return (new Food.Builder()).hunger(hunger).saturation(saturation).build();
+	}
+	
+	private static <T extends Item> void register(IForgeRegistry<Item> registry, String name, T item) {
+		item.setRegistryName(name);
+		registry.register(item);
+	}
+	
 }

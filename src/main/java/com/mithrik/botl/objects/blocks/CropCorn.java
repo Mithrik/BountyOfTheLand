@@ -1,4 +1,4 @@
-package com.mithrik.botl.objects.blocks.crops;
+package com.mithrik.botl.objects.blocks;
 
 import com.mithrik.botl.objects.items.InitItems;
 

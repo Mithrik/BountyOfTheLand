@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:yam"
+          "name": "botl:yam"
         }
       ]
     },
@@ -26,13 +26,13 @@
               }
             }
           ],
-          "name": "minecraft:yam"
+          "name": "botl:yam"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "minecraft:yam",
+          "block": "botl:yams",
           "properties": {
             "age": "7"
           }

@@ -1,4 +1,4 @@
-package com.mithrik.botl.objects.blocks.crops;
+package com.mithrik.botl.objects.blocks;
 
 import com.mithrik.botl.objects.items.InitItems;
 
@@ -23,7 +23,7 @@ public class CropYams extends CropsBlock {
 			Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D)};
 
 
-	protected CropYams(Properties builder) {
+	public CropYams(Properties builder) {
 		super(builder);
 	}
 

@@ -1,0 +1,14 @@
+{
+	"replace": false,
+	"values": [
+		"botl:wild_beetroots",
+		"botl:wild_carrots",
+		"botl:wild_corn",
+		"botl:wild_millet",
+		"botl:wild_potatoes",
+		"botl:wild_rice",
+		"botl:wild_rye",
+		"botl:wild_wheat",
+		"botl:wild_yams"
+	]
+}

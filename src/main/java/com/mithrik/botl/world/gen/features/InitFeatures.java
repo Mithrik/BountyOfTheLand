@@ -14,7 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class InitFeatures {
 
-	public void addFeatures(final FMLCommonSetupEvent event) {
+	public static void addFeatures(final FMLCommonSetupEvent event) {
 		
 		// Biome lists go here as a means of organization. If a feature is found in multiple biomes better specified through an array, add said array here and iterate it below.
 		Biome[] wildBeetrootBiomes = {Biomes.FOREST,Biomes.WOODED_HILLS,Biomes.TAIGA,Biomes.TAIGA_HILLS,Biomes.TAIGA_MOUNTAINS};

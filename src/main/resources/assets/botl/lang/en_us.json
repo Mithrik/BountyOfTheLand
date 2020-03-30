@@ -8,7 +8,7 @@
     "block.botl.wild_rice": "Red Rice",
     "block.botl.wild_rye": "Ryegrass",
     "block.botl.wild_wheat": "Einkorn",
-    "block.botl.wild_yams": "Lesser Yam",
+    "block.botl.wild_yams": "Bitter Yam",
     "item.botl.corn": "Corn",
     "item.botl.mango": "Mango",
     "item.botl.millet": "Millet",
@@ -16,10 +16,13 @@
     "item.botl.rice": "Rice",
     "item.botl.rye": "Rye",
     "item.botl.yam": "Yam",
+    "item.botl.carrot_seeds":"Carrot Seeds",
     "item.botl.corn_seeds":"Corn Seeds",
     "item.botl.millet_seeds": "Millet Seeds",
+    "item.botl.potato_seeds":"Potato Seeds",
     "item.botl.rice_seeds":"Rice Seeds",
     "item.botl.rye_seeds":"Rye Seeds",
+    "item.botl.yam_seeds":"Yam Bulbil",
     "itemGroup.botl_blocks": "Bounty of the Land Blocks",
     "itemGroup.botl_items": "Bounty of the Land Items"
 }

@@ -23,34 +23,35 @@ public class BountyOfTheLand
 {
 	public static BountyOfTheLand instance;
 	public static CommonProxy proxy = DistExecutor.runForDist(() -> ClientProxy::new, () -> CommonProxy::new);
-	public static final InitFeatures botlFeatures = new InitFeatures();
 	
     public BountyOfTheLand() {
-        // Create instance of the mod itself
+        // Create instance of the mod
         instance = this;
         
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(botlFeatures::addFeatures);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::loadComplete);
+        // Register the main class setup methods to Forge's event buses
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onCommonSetup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onClientSetup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onLoadComplete);
 
     	// Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void commonSetup(FMLCommonSetupEvent event)
+    private void onCommonSetup(FMLCommonSetupEvent event)
     {
         // PREINIT CODE HERE...
     	Log.LOGGER.info("Common Setup");
     	InitEvents.initEventRegisters();
+    	InitFeatures.addFeatures(event);
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
+    private void onClientSetup(final FMLClientSetupEvent event) {
     	// CLIENT-SIDE CODE HERE...
+    	Log.LOGGER.info("Client-side Setup");
     	RenderCutouts.renderCutouts(event);
     }
 
-    private void loadComplete(final FMLLoadCompleteEvent event) {
+    private void onLoadComplete(final FMLLoadCompleteEvent event) {
     	// POSTINIT CODE HERE...
     	Log.LOGGER.info("Post Registration");
     	proxy.init();

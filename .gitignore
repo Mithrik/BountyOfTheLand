@@ -1,7 +1,8 @@
-# Eclipse
+# Eclipse & other IDEs
 .classpath
 .settings
 .project
+.vscode/
 *.launch
 bin/
 

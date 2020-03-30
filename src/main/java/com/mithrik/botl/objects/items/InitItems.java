@@ -51,7 +51,7 @@ public class InitItems {
 		
 		// FOOD ITEMS
 		register(r,"corn",new CropItem(new Item.Properties().food(makeFood(2, 0.6f)).group(ItemGroupBotL.BOTL_ITEMS)));
-		register(r,"yam",new SeedItem(InitBlocks.CROP_YAMS, new Item.Properties().food(makeFood(2, 0.6f)).group(ItemGroupBotL.BOTL_ITEMS)));
+		register(r,"yam",new CropItem(new Item.Properties().food(makeFood(4, 1.2f)).group(ItemGroupBotL.BOTL_ITEMS)));
 		
 		register(r,"peach",new Item(new Item.Properties().food(makeFood(4, 2.4f)).group(ItemGroupBotL.BOTL_ITEMS)));
 		register(r,"mango",new Item(new Item.Properties().food(makeFood(4, 3.6f)).group(ItemGroupBotL.BOTL_ITEMS)));
@@ -61,12 +61,15 @@ public class InitItems {
 		register(r,"millet_seeds",new SeedItem(InitBlocks.CROP_MILLET, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
 		register(r,"rice_seeds",new SeedItem(InitBlocks.CROP_RICE, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
 		register(r,"rye_seeds",new SeedItem(InitBlocks.CROP_RYE, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
+		register(r,"yam_seeds",new SeedItem(InitBlocks.CROP_YAMS, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
 	}
 	
+	// === OBJECT TEMPLATES ===
 	private static Food makeFood(int hunger, float saturation){
 		return (new Food.Builder()).hunger(hunger).saturation(saturation).build();
 	}
 	
+	// === REGRISTRATION ===
 	private static <T extends Item> void register(IForgeRegistry<Item> registry, String name, T item) {
 		item.setRegistryName(name);
 		registry.register(item);

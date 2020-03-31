@@ -1,6 +1,8 @@
 package com.mithrik.botl;
 
 import com.mithrik.botl.events.InitEvents;
+import com.mithrik.botl.objects.compat.InitCompostables;
+import com.mithrik.botl.objects.compat.InitFlammables;
 import com.mithrik.botl.proxy.ClientProxy;
 import com.mithrik.botl.proxy.CommonProxy;
 import com.mithrik.botl.util.Log;
@@ -42,6 +44,8 @@ public class BountyOfTheLand
         // PREINIT CODE HERE...
     	Log.LOGGER.info("Common Setup");
     	InitEvents.initEventRegisters();
+    	InitFlammables.setup();
+    	InitCompostables.setup();
     	InitFeatures.addFeatures(event);
     }
 
@@ -53,13 +57,13 @@ public class BountyOfTheLand
 
     private void onLoadComplete(final FMLLoadCompleteEvent event) {
     	// POSTINIT CODE HERE...
-    	Log.LOGGER.info("Post Registration");
+    	Log.LOGGER.info("Post Registration Setup");
     	proxy.init();
     }
     
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
     	// SERVER STARTUP CODE HERE...
-    	Log.LOGGER.info("HELLO from server starting");
+    	Log.LOGGER.info("Server Starting...");
     }
 }

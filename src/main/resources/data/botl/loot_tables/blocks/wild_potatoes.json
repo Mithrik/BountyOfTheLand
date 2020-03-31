@@ -21,11 +21,18 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:potato"
+              "functions": [{
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 0.0,
+                  "max": 2.0,
+                  "type": "minecraft:uniform"
+                }
+              }],
+              "name": "minecrat:potato"
             }
           ]
-        }
-      ]
-    }
+        }]
+      }
   ]
 }

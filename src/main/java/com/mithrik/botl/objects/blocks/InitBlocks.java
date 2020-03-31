@@ -52,51 +52,11 @@ public class InitBlocks {
 	@ObjectHolder("yams")
 	public static final Block CROP_YAMS = null;
 	
-//	REGISTRATION
-//	@SubscribeEvent
-//	public static void RegisterBlocks(final RegistryEvent.Register<Block> event) {
-//		IForgeRegistry<Block> r = event.getRegistry();
-//		
-//		// SIMPLE BLOCKS
-//		registerBlock(r,"a",new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5f,6.0f).sound(SoundType.STONE)).setRegistryName("slate"));
-//		
-//		// CROP BLOCKS
-//		registerBlock(r,"a",new CropCorn(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)).setRegistryName("corn"));
-//		registerBlock(r,"a",new CropMillet(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)).setRegistryName("millet"));
-//		registerBlock(r,"a",new CropGrain(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP), InitItems.RICE_SEEDS).setRegistryName("rice"));
-//		registerBlock(r,"a",new CropGrain(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP), InitItems.RYE_SEEDS).setRegistryName("rye"));
-//		registerBlock(r,"a",new CropYams(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)).setRegistryName("yams"));
-//		
-//		// WILD CROP BLOCKS
-//		registerBlock(r,"a",new WildCropBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).doesNotBlockMovement().sound(SoundType.PLANT)).setRegistryName("wild_beetroots"));
-//		registerBlock(r,"a",new WildCropBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).doesNotBlockMovement().sound(SoundType.PLANT)).setRegistryName("wild_carrots"));
-//		registerBlock(r,"a",new WildCropBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).doesNotBlockMovement().sound(SoundType.PLANT)).setRegistryName("wild_corn"));
-//		registerBlock(r,"a",new WildCropBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).doesNotBlockMovement().sound(SoundType.PLANT)).setRegistryName("wild_millet"));
-//		registerBlock(r,"a",new WildCropBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).doesNotBlockMovement().sound(SoundType.PLANT)).setRegistryName("wild_potatoes"));
-//		registerBlock(r,"a",new WildCropBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).doesNotBlockMovement().sound(SoundType.PLANT)).setRegistryName("wild_rice"));
-//		registerBlock(r,"a",new WildCropBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).doesNotBlockMovement().sound(SoundType.PLANT)).setRegistryName("wild_rye"));
-//		registerBlock(r,"a",new WildCropBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).doesNotBlockMovement().sound(SoundType.PLANT)).setRegistryName("wild_wheat"));
-//		registerBlock(r,"a",new WildCropBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).doesNotBlockMovement().sound(SoundType.PLANT)).setRegistryName("wild_yams"));
-//	}
-//	
-//	@SubscribeEvent
-//	public static void RegisterBlockItems(final RegistryEvent.Register<Item> event) {
-//		IForgeRegistry<Item> r = event.getRegistry();
-//		
-//		// SIMPLE BLOCKS
-//		registerBlock(r,"a",new BlockItem(SLATE, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("slate"));
-//		
-//		// WILD CROP BLOCKS
-//		registerBlock(r,"a",new BlockItem(WILD_BEETROOTS, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("wild_beetroots"));
-//		registerBlock(r,"a",new BlockItem(WILD_CARROTS, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("wild_carrots"));
-//		registerBlock(r,"a",new BlockItem(WILD_CORN, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("wild_corn"));
-//		registerBlock(r,"a",new BlockItem(WILD_MILLET, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("wild_millet"));
-//		registerBlock(r,"a",new BlockItem(WILD_POTATOES, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("wild_potatoes"));
-//		registerBlock(r,"a",new BlockItem(WILD_RICE, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("wild_rice"));
-//		registerBlock(r,"a",new BlockItem(WILD_RYE, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("wild_rye"));
-//		registerBlock(r,"a",new BlockItem(WILD_WHEAT, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("wild_wheat"));
-//		registerBlock(r,"a",new BlockItem(WILD_YAMS, new BlockItem.Properties().group(ItemGroupBotL.BOTL_BLOCKS)).setRegistryName("wild_yams"));
-//	}
+	//BLOCKS TO OVERWRITE
+	@ObjectHolder("minecraft:carrots")
+	public static final Block CROP_CARROTS = null;
+	@ObjectHolder("minecraft:potatoes")
+	public static final Block CROP_POTATOES = null;
 	
 	@SubscribeEvent
 	public static void RegisterBlocks(final RegistryEvent.Register<Block> event) {
@@ -112,6 +72,10 @@ public class InitBlocks {
 		registerBlock(r, "rye", new CropGrain(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP), InitItems.RYE_SEEDS));
 		registerBlock(r, "yams", new CropYams(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)));
 		
+		// OVERWRITES
+		event.getRegistry().register(new CropCarrots(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)).setRegistryName("carrots"));
+		event.getRegistry().register(new CropPotatoes(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)).setRegistryName("potatoes"));
+
 		// WILD CROP BLOCKS
 		registerBlock(r, "wild_beetroots", createWildCropBlock());
 		registerBlock(r, "wild_carrots", createWildCropBlock());

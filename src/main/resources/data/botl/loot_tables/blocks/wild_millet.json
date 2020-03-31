@@ -21,11 +21,31 @@
             },
             {
               "type": "minecraft:item",
+              "functions": [{
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 0.0,
+                  "max": 2.0,
+                  "type": "minecraft:uniform"
+                }
+              }],
               "name": "botl:millet_seeds"
             }
           ]
-        }
-      ]
-    }
+        }]
+      },
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "conditions": [{
+              "condition": "minecraft:random_chance",
+              "chance": 0.015625
+            }],
+            "name":"botl:millet"
+          }
+        ]
+      }
   ]
 }

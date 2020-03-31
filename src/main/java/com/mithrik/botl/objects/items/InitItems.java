@@ -33,10 +33,13 @@ public class InitItems {
 	public static final Item PEACH = null;
 	public static final Item MANGO = null;
 	
+	public static final Item CARROT_SEEDS = null;
 	public static final Item CORN_SEEDS = null;
+	public static final Item MILLET_SEEDS = null;
+	public static final Item POTATO_SEEDS = null;
 	public static final Item RICE_SEEDS = null;
 	public static final Item RYE_SEEDS = null;
-	public static final Item MILLET_SEEDS = null;
+	public static final Item YAM_SEEDS = null;
 	
 //	REGISTRATION
 	@SubscribeEvent
@@ -57,6 +60,7 @@ public class InitItems {
 		register(r,"mango",new Item(new Item.Properties().food(makeFood(4, 3.6f)).group(ItemGroupBotL.BOTL_ITEMS)));
 		
 		// BLOCK-NAMED ITEMS
+
 		register(r,"corn_seeds",new SeedItem(InitBlocks.CROP_CORN, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
 		register(r,"millet_seeds",new SeedItem(InitBlocks.CROP_MILLET, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));
 		register(r,"rice_seeds",new SeedItem(InitBlocks.CROP_RICE, new Item.Properties().group(ItemGroupBotL.BOTL_ITEMS)));

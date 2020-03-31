@@ -28,7 +28,7 @@ public class CropYams extends CropsBlock {
 	}
 
 	protected IItemProvider getSeedsItem() {
-		return InitItems.YAM;
+		return InitItems.YAM_SEEDS;
 	}
 	
 	public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XXX"
+    "###"
   ],
   "key": {
-    "X": {
-      "tag": "botl:millet"
+    "#": {
+      "item": "botl:millet"
     }
   },
   "result": {
-    "item": "botl:roti"
+    "item": "botl:phulka"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "botl:rice"
+  },
+  "result": "botl:cooked_rice",
+  "experience": 0.35,
+  "cookingtime": 200
+}

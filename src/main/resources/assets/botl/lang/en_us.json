@@ -1,4 +1,5 @@
 {
+    "item.minecraft.bread":"Wheat Bread",
     "block.botl.slate": "Slate",
     "block.botl.wild_beetroots": "Sea Beet",
     "block.botl.wild_carrots": "Queen Anne's Lace",
@@ -13,8 +14,10 @@
     "item.botl.mango": "Mango",
     "item.botl.millet": "Millet",
     "item.botl.peach": "Peach",
+    "item.botl.phulka": "Phulka",
     "item.botl.rice": "Rice",
     "item.botl.rye": "Rye",
+    "item.botl.rye_bread": "Rye Bread",
     "item.botl.yam": "Yam",
     "item.botl.carrot_seeds":"Carrot Seeds",
     "item.botl.corn_seeds":"Corn Seeds",

@@ -1,0 +1,32 @@
+{
+  "parent": "botl:recipes/root",
+  "rewards": {
+    "recipes": [
+      "botl:rye_bread"
+    ]
+  },
+  "criteria": {
+    "has_resource": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "botl:rye"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "botl:rye_bread"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_resource",
+      "has_the_recipe"
+    ]
+  ]
+}

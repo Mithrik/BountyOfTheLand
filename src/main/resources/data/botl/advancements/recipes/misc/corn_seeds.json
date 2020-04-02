@@ -1,0 +1,32 @@
+{
+  "parent": "botl:recipes/root",
+  "rewards": {
+    "recipes": [
+      "botl:corn_seeds"
+    ]
+  },
+  "criteria": {
+    "has_resource": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "botl:corn"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "botl:corn_seeds"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_resource",
+      "has_the_recipe"
+    ]
+  ]
+}

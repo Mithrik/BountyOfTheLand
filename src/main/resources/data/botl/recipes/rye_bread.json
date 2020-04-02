@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "tag": "botl:rye"
+    }
+  },
+  "result": {
+    "item": "botl:rye_bread"
+  }
+}

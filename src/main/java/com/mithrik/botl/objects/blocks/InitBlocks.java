@@ -53,10 +53,10 @@ public class InitBlocks {
 	public static final Block CROP_YAMS = null;
 	
 	//BLOCKS TO OVERWRITE
-	@ObjectHolder("minecraft:carrots")
-	public static final Block CROP_CARROTS = null;
-	@ObjectHolder("minecraft:potatoes")
-	public static final Block CROP_POTATOES = null;
+//	@ObjectHolder("minecraft:carrots")
+//	public static final Block CROP_CARROTS = null;
+//	@ObjectHolder("minecraft:potatoes")
+//	public static final Block CROP_POTATOES = null;
 	
 	@SubscribeEvent
 	public static void RegisterBlocks(final RegistryEvent.Register<Block> event) {
@@ -73,8 +73,8 @@ public class InitBlocks {
 		registerBlock(r, "yams", new CropYams(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)));
 		
 		// OVERWRITES
-		event.getRegistry().register(new CropCarrots(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)).setRegistryName("carrots"));
-		event.getRegistry().register(new CropPotatoes(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)).setRegistryName("potatoes"));
+//		event.getRegistry().register(new CropCarrots(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)).setRegistryName("carrots"));
+//		event.getRegistry().register(new CropPotatoes(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)).setRegistryName("potatoes"));
 
 		// WILD CROP BLOCKS
 		registerBlock(r, "wild_beetroots", createWildCropBlock());

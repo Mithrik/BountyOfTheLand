@@ -10,14 +10,12 @@ public class InitCompostables {
 	private static final float LOW = 0.3f;
 //	private static final float MEDIUM_LOW = 0.5f;
 	private static final float MEDIUM = 0.65f;
-//	private static final float HIGH = 0.85f;
+	private static final float HIGH = 0.85f;
 //	private static final float DEFINITE = 1.0f;
 	
 	public static void setup(){
-		ComposterBlock.CHANCES.put(InitItems.CARROT_SEEDS, LOW);
 		ComposterBlock.CHANCES.put(InitItems.CORN_SEEDS, LOW);
 		ComposterBlock.CHANCES.put(InitItems.MILLET_SEEDS, LOW);
-		ComposterBlock.CHANCES.put(InitItems.POTATO_SEEDS, LOW);
 		ComposterBlock.CHANCES.put(InitItems.RICE_SEEDS, LOW);
 		ComposterBlock.CHANCES.put(InitItems.RYE_SEEDS, LOW);
 		ComposterBlock.CHANCES.put(InitItems.YAM_SEEDS, LOW);
@@ -29,5 +27,9 @@ public class InitCompostables {
 		ComposterBlock.CHANCES.put(InitItems.RICE, MEDIUM);
 		ComposterBlock.CHANCES.put(InitItems.RYE, MEDIUM);
 		ComposterBlock.CHANCES.put(InitItems.YAM, MEDIUM);
+		
+		ComposterBlock.CHANCES.put(InitItems.COOKED_RICE, HIGH);
+		ComposterBlock.CHANCES.put(InitItems.PHULKA, HIGH);
+		ComposterBlock.CHANCES.put(InitItems.RYE_BREAD, HIGH);
 	}
 }

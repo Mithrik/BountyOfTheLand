@@ -36,10 +36,8 @@ public class InitItems {
 	public static final Item PHULKA = null;
 	public static final Item RYE_BREAD = null;
 	
-	public static final Item CARROT_SEEDS = null;
 	public static final Item CORN_SEEDS = null;
 	public static final Item MILLET_SEEDS = null;
-	public static final Item POTATO_SEEDS = null;
 	public static final Item RICE_SEEDS = null;
 	public static final Item RYE_SEEDS = null;
 	public static final Item YAM_SEEDS = null;

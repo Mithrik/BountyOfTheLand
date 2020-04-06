@@ -3,6 +3,8 @@ package com.mithrik.botl.objects.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropsBlock;
+import net.minecraft.state.IntegerProperty;
+import net.minecraft.state.properties.BlockStateProperties;
 
 import java.util.Random;
 
@@ -18,6 +20,7 @@ import net.minecraft.world.server.ServerWorld;
 
 public class CropMillet extends CropsBlock{
 
+	public static final IntegerProperty MILLET_AGE = BlockStateProperties.AGE_0_3;
 	protected final VoxelShape[] shapes = new VoxelShape[]{
 			Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), 
 			Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), 

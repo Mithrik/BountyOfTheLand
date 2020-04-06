@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "botl:yam"
+  },
+  "result": "botl:cooked_yam",
+  "experience": 0.35,
+  "cookingtime": 200
+}

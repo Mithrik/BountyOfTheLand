@@ -7,7 +7,6 @@ import com.mithrik.botl.util.ModInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -29,8 +28,8 @@ public class InitBlocks {
 //	BLOCK DECLARATIONS
 	
 	// SIMPLE BLOCKS
-	public static final Block SLATE = null;
 	
+	// CROP BLOCKS
 	public static final Block WILD_BEETROOTS = null;
 	public static final Block WILD_CARROTS = null;
 	public static final Block WILD_CORN = null;
@@ -63,8 +62,7 @@ public class InitBlocks {
 		IForgeRegistry<Block> r = event.getRegistry();
 		
 		// SIMPLE BLOCKS
-		registerBlock(r, "slate", new Block(Block.Properties.create(Material.ROCK, MaterialColor.STONE).hardnessAndResistance(1.5f,6.0f).sound(SoundType.STONE)));
-		
+				
 		// CROP BLOCKS
 		registerBlock(r, "corn", new CropCorn(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)));
 		registerBlock(r, "millet", new CropMillet(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP)));
@@ -93,7 +91,6 @@ public class InitBlocks {
 		IForgeRegistry<Item> r = event.getRegistry();
 		
 		// SIMPLE BLOCKS
-		registerBlockItem(r,"slate", createBlockItem(SLATE));
 		
 		// WILD CROP BLOCKS
 		registerBlockItem(r,"wild_beetroots", createBlockItem(WILD_BEETROOTS));

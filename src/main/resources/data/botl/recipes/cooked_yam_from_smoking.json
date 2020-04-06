@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "botl:yam"
+  },
+  "result": "botl:cooked_yam",
+  "experience": 0.35,
+  "cookingtime": 100
+}
